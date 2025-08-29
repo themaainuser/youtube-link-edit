@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
-import { toast } from "sonner";
 
+// @typescript-eslint/no-unused-vars
 type RequestInput = {
   youtubeLink: string;
   timestamp?: number;

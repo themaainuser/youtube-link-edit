@@ -8,9 +8,9 @@ import GitHubButton from "./components/githubButton";
 
 export default function Home() {
   const [youtubeLink, setYoutubeLink] = useState("");
-  const [htimestamp, setHTimestamp] = useState(0);
-  const [mtimestamp, setMTimestamp] = useState(0);
-  const [stimestamp, setSTimestamp] = useState(0);
+  const [htimestamp, setHTimestamp] = useState<number>(0);
+  const [mtimestamp, setMTimestamp] = useState<number>(0);
+  const [stimestamp, setSTimestamp] = useState<number>(0);
   const [newLink, setNewLink] = useState("");
 
   const ytLinkPattern =
@@ -88,8 +88,8 @@ export default function Home() {
   };
 
   return (
-    // <div className="flex min-h-screen flex-col">
     <div className="flex min-h-screen flex-col bg-neutral-900 p-2">
+      <Toaster />
       <Container>
         {/* <div className="flex h-[5rem] min-w-[10rem] items-center justify-center bg-orange-400 text-center text-lg font-bold text-neutral-900">
           Bookmark Me

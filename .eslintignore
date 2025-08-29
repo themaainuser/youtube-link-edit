@@ -1,2 +1,3 @@
 app/components/githubButton.tsx
 app/page.tsx
+app/components/ui/liquid-gradient.tsx
