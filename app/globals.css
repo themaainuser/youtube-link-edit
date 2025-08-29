@@ -6,6 +6,9 @@
 .cursor-submit {
   cursor: url("/this2.png"), pointer;
 }
+.cursor-bookmark {
+  cursor: url("/book-marked.png"), pointer;
+}
 
 @theme inline {
   --color-background: var(--background);

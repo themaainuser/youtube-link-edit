@@ -1,9 +1,10 @@
 "use client";
-import Input from "@/components/Input";
-import { Container } from "../components/container";
+import Input from "@/app/components/Input";
+import { Container } from "./components/container";
 import { useState } from "react";
 import { toast, Toaster } from "sonner";
 import { z } from "zod";
+import GitHubButton from "./components/githubButton";
 
 export default function Home() {
   const [youtubeLink, setYoutubeLink] = useState("");
@@ -87,15 +88,16 @@ export default function Home() {
   };
 
   return (
-    <div className="flex min-h-screen flex-col">
-      <div className="flex min-h-screen flex-col bg-neutral-900">
-        <Toaster />
-        <Container className="flex flex-col p-2 bg-emerald-500">
-          <div className="h-[5rem] min-w-[10rem] items-start bg-orange-400 text-center text-lg font-bold text-neutral-900">
-            Bookmark Me
-          </div>
-        </Container>
-        <Container className="flex flex-col justify-center bg-red-400">
+    // <div className="flex min-h-screen flex-col">
+    <div className="flex min-h-screen flex-col bg-neutral-900 p-2">
+      <Container>
+        {/* <div className="flex h-[5rem] min-w-[10rem] items-center justify-center bg-orange-400 text-center text-lg font-bold text-neutral-900">
+          Bookmark Me
+        </div> */}
+        <GitHubButton />
+      </Container>
+      <div className="flex flex-1 flex-col justify-center">
+        <Container>
           <form
             onSubmit={handleSubmit}
             className="flex grid-cols-1 justify-center gap-2"
